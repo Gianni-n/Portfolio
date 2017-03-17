@@ -10,4 +10,19 @@ class DefaultController extends Controller
     {
         return $this->render('PortfolioBundle:Default:index.html.twig');
     }
+
+    public function projectsAction()
+    {
+        return $this->render('PortfolioBundle:Default:projects.html.twig');
+    }
+
+    public function aboutAction()
+    {
+        return $this->render('PortfolioBundle:Default:about.html.twig');
+    }
+
+    public function contactAction()
+    {
+        return $this->render('PortfolioBundle:Default:contact.html.twig');
+    }
 }
