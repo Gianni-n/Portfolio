@@ -1,1 +1,50 @@
-Page à propos
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">FR</a></li>
+        <li><a href="#!">EN</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="{{ path('portfolio_homepage') }}" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ path('portfolio_about') }}">A Propos</a></li>
+                <li><a href="{{ path('portfolio_projects') }}">Projets</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Langue<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+            <div class="row">
+                <div class="col m1">1</div>
+                <div class="col m1">2</div>
+                <div class="col m1">3</div>
+                <div class="col m1">4</div>
+                <div class="col m1">5</div>
+                <div class="col m1">6</div>
+                <div class="col m1">7</div>
+                <div class="col m1">8</div>
+                <div class="col m1">9</div>
+                <div class="col m1">10</div>
+                <div class="col m1">11</div>
+                <div class="col l4">12</div>
+            </div>
+    </div>
+    <div class="row">
+        <div class=" box indigo lighten-2 z-depth-4"><i class="material-icons">menu</i></div>
+        <div class=" box purple lighten-2 z-depth-4"><i class="material-icons">user</i></div>
+        <div class=" box lime lighten-2 z-depth-4"><i class="material-icons">mail</i></div>
+    </div>
+    <div class="row">
+        <div class="box">1</div>
+        <div class="box">1</div>
+        <div class="box">1</div>
+        <div class="box">1</div>
+        <div class="box">1</div>
+    </div>
+
+{% endblock %}
