@@ -1,7 +1,27 @@
+/******Everywhere*/
 * {
     font-family: 'Poppins', sans-serif;
 }
-/*****header*/
+body{
+    background-color:#37474f ;
+    background-image: url(https://s18.postimg.org/n9xmj7f3t/bkg.png);
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+p {
+    text-align: justify;
+}
+.container{
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+/*****navbar*/
+
 .logo{
     margin-left: 30px;
 }
@@ -11,11 +31,16 @@
 .logo-title{
     color:#37474f;
 }
+@media screen and (max-width:993px ){
+    .logo{
+        margin-left: 0;
+    }
+}
 /*****footer*/
 .footer{
-    -webkit-box-shadow: 0 -8px 8px -5px rgba(186,186,186,1);
+    /*-webkit-box-shadow: 0 -8px 8px -5px rgba(186,186,186,1);
     -moz-box-shadow: 0 -8px 8px -5px rgba(186,186,186,1);
-    box-shadow: 0 -8px 8px -5px rgba(186,186,186,1);
+    box-shadow: 0 -8px 8px -5px rgba(186,186,186,1);*/
     padding-top: 15px;
     border:solid 1px #efebe9;
 }
@@ -33,14 +58,82 @@
     -moz-box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.75);
     box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.75);
 }
+.social:hover{
+    opacity: 0.8;
+
+}
 .copyright{
     text-align: center;
     font-size:10px;
     margin-bottom: 0;
     padding-bottom: 10px;
 }
-@media screen and (max-width:993px ){
-    .logo{
-        margin-left: 0;
-    }
+/******homepage*/
+.intro-bloc{
+    border-radius: 3px;
+    padding:15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 50px;
 }
+.profile-img{
+    border-radius: 3px;
+    width:100%;
+    height: 100%;
+
+}
+.intro-title{
+    font-size:25px;
+    text-align: center;
+}
+.text-bloc{
+    margin:15px;
+    width: 70%;
+}
+.picture-bloc{
+    width:30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.btn-bloc-prez{
+
+    display: flex;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+.project-btn, .about-btn{
+    width: 30vw;
+    height: 30vw;
+    border-radius:100%;
+    margin-right:20px;
+    margin-left:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
+.about-icon, .project-icon{
+    font-size: 2.5em;
+}
+.icon-title{
+    font-size:1.2em;
+    margin:0;
+}
+
+@media screen and (max-width:700px ){
+    .picture-bloc{
+        width:40%;
+    }
+    .text-bloc{
+        width: 100%;
+    }
+    .intro-bloc{
+        flex-direction: column;
+    }
+
+}
+/***********/
+
