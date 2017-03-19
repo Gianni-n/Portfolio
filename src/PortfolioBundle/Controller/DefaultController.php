@@ -13,7 +13,13 @@ class DefaultController extends Controller
 
     public function projectsAction()
     {
-        return $this->render('PortfolioBundle:Default:projects.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $projects = $em->getRepository('PortfolioBundle:Project')->getByDate();
+
+
+        return $this->render('PortfolioBundle:Default:projects.html.twig', array(
+            'projects' => $projects,
+        ));
     }
 
     public function aboutAction()

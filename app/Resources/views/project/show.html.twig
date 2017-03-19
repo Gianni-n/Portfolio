@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Project</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ project.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ project.title }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if project.date %}{{ project.date|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Shortdescription</th>
+                <td>{{ project.shortDescription }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ project.description }}</td>
+            </tr>
+            <tr>
+                <th>Code</th>
+                <td>{{ project.code }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ project.img }}</td>
+            </tr>
+            <tr>
+                <th>Img1</th>
+                <td>{{ project.img1 }}</td>
+            </tr>
+            <tr>
+                <th>Img2</th>
+                <td>{{ project.img2 }}</td>
+            </tr>
+            <tr>
+                <th>Img3</th>
+                <td>{{ project.img3 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('project_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('project_edit', { 'id': project.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
