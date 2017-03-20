@@ -1,4 +1,90 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+    <div class="container">
+
+    <div class="row">
+
+        <!----->
+        <div class="col s12 m12 l12">
+                <div class="card orange lighten-2">
+                    <div class="card-content blue-grey-text text-darken-3">
+                        <span class="card-title ">Formation</span>
+                        <p>Après avoir voulu styliser mon theme wordpress, j'ai commencé à m'intéresser sur la création de site internet. Le web est une vrai mine d’or en terme de ressources avec une communauté très active, et c’est ainsi que j'ai commencé à me former en autodidacte. Finalement, j’ai tellement aimé que j’ai décidé d’en faire mon métier ! C’est ainsi que  j’ai poursuivi une formation de développeur web PHP / Symfony à la Wild Code School où j’ai pu découvrir et apprendre à travailler avec les bonnes pratiques en matière de code mais aussi sur l’aspect projet, bien sûr je veux parler des méthodes agiles.</p>
+                    </div>
+                </div>
+        </div>
+        <!----->
+
+
+    <div class="col s12 m4 l4">
+        <div class="card horizontal">
+            <div class="card-stacked">
+                <div class="card-content green lighten-4">
+                    <span class="card-title ">Back-end</span>
+                    <p>Coté front-end   ----------------- am a very simple card. I am good at containing small bits of information.</p>
+                </div>
+                <div class="card-action icon-bloc">
+                    <img class="back-end-icon" src="{{ asset('pictures/sf.png') }}" alt="">
+                    <img class="back-end-icon" src="{{ asset('pictures/php.png') }}" alt="">
+                    <img class="back-end-icon" src="{{ asset('pictures/sql.png') }}" alt="">
+                    <img class="back-end-icon" src="{{ asset('pictures/html.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+        <!----->
+    <div class="col s12 m4 l4">
+        <div class="card horizontal">
+
+            <div class="card-stacked">
+                <div class="card-content yellow lighten-4">
+                    <span class="card-title ">Front-end</span>
+                    <p>Phylosophie et cadre de travail  -------------I am a very simple card. I am good at containing small bits of information.</p>
+                </div>
+                <div class="card-action icon-bloc">
+                    <img class="back-end-icon" src="{{ asset('pictures/css.png') }}" alt="">
+                    <img class="back-end-icon" src="{{ asset('pictures/bootstrap.png') }}" alt="">
+                    <img class="back-end-icon" src="{{ asset('pictures/materialize.png') }}" alt="">
+                    <img class="back-end-icon" src="{{ asset('pictures/ps.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+        <!----->
+        <div class="col s12 m4 l4 ">
+            <div class="card horizontal">
+
+                <div class="card-stacked">
+                    <div class="card-content cyan lighten-4">
+                        <span class="card-title ">Outils</span>
+                        <p>Phylosophie et cadre de travail  -------------I am a very simple card. I am good at containing small bits of information.</p>
+                    </div>
+                    <div class="card-action icon-bloc">
+                        <img class="back-end-icon" src="{{ asset('pictures/git.png') }}" alt="">
+                        <img class="back-end-icon" src="{{ asset('pictures/github2.png') }}" alt="">
+                        <img class="back-end-icon" src="{{ asset('pictures/linux.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-------->
+        <ul class="collapsible " data-collapsible="acordion">
+
+        <li>
+            <div class="collapsible-header brown lighten-5"><i class="material-icons">mouse</i>Référence e-learning</div>
+            <div class="collapsible-body blue-grey lighten-5"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header blue-grey lighten-4"><i class="material-icons">school</i>Diplomes & certifications</div>
+            <div class="collapsible-body orange lighten-2"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header brown lighten-5"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body blue-grey lighten-5"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        </ul>
+        <!-------->
+    </div>
 
 {% endblock %}

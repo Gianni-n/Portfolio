@@ -14,7 +14,7 @@
                         <img src="{{ project.img }}">
                         <a title="Description du projet" href="#modal{{ numb }}" class="btn-floating halfway-fab waves-effect waves-light orange"><i class="material-icons">add</i></a>
                         {% if project.code|length > 3 %}
-                            <a  title="Voir le code source" class="btn-floating halfway-fab waves-effect waves-light left blue-grey darken-3"><i class="material-icons">code</i></a>
+                            <a href="{{ project.code }}" target="_blank" title="Voir le code source" class="btn-floating halfway-fab waves-effect waves-light left blue-grey darken-3"><i class="material-icons">code</i></a>
                         {% endif %}
                     </div>
                     <div class="card-content">
@@ -27,14 +27,17 @@
                 <div class="modal-content">
                     <h4>{{ project.title }}</h4>
                     <p>{{ project.description }}</p>
-                    <div class="row">
-                        <img class="materialboxed col m4" width="100" src="{{ asset('pictures/bkg.png') }}">
-                        <img class="materialboxed col m4" width="100" src="{{ asset('pictures/bkg.png') }}">
-                        <img class="materialboxed col m4"  src="{{ asset('pictures/bkg.png') }}">
+
+                    <div class="row img-bloc">
+
+                        <img class="materialboxed col  t1" width="100%" src="{{ project.img1 }}">
+                        <img class="materialboxed col  t2" width="100%" src="{{ project.img2 }}">
+                        <img class="materialboxed col  t3" width="100%" src="{{ project.img3 }}">
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
+                <div class="modal-footer brown lighten-5">
+                    <a href="#!" class=" modal-action waves-effect waves-light btn-flat orange modal-close whote-text">Fermer</a>
+                    <a href="{{ project.code }}" target="_blank" class=" modal-action waves-effect waves-light blue-grey darken-3 btn-flat left white-text">Code source</a>
                 </div>
             </div>
             {% set numb = numb+1 %}

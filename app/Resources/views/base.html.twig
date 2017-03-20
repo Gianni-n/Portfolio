@@ -23,6 +23,7 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+    <main>
         {% include 'nav.html.twig' %}
         {% block body %}{% endblock %}
         {% include 'footer.html.twig' %}
@@ -41,5 +42,6 @@
                 });
             </script>
         {% endblock %}
+    </main>
     </body>
 </html>
