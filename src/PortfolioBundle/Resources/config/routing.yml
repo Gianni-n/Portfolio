@@ -14,11 +14,11 @@ portfolio_contact:
     path: /contact
     defaults: { _controller: PortfolioBundle:Default:contact}
 
-portfolio_picture:
-        resource: "@PortfolioBundle/Resources/config/routing/picture.yml"
-        prefix:   /picture
-
 portfolio_content:
     resource: "@PortfolioBundle/Resources/config/routing/content.yml"
     prefix:   /content
+
+portfolio_project:
+    resource: "@PortfolioBundle/Resources/config/routing/project.yml"
+    prefix:   /project
 

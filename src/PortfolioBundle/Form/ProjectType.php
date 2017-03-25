@@ -6,14 +6,24 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PictureType extends AbstractType
+class ProjectType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')        ;
+        $builder
+            ->add('title')
+            ->add('date')
+            ->add('shortDescription')
+            ->add('description')
+            ->add('code')
+            ->add('img')
+            ->add('img1')
+            ->add('img2')
+            ->add('img3')
+        ;
     }
     
     /**
@@ -22,7 +32,7 @@ class PictureType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'PortfolioBundle\Entity\Picture'
+            'data_class' => 'PortfolioBundle\Entity\Project'
         ));
     }
 
@@ -31,7 +41,7 @@ class PictureType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'portfoliobundle_picture';
+        return 'portfoliobundle_project';
     }
 
 
