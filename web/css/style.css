@@ -89,7 +89,7 @@ p {
     font-size:25px;
     text-align: center;
 }
-.text-bloc{
+.tcext-bloc{
     margin:15px;
     width: 70%;
 }
@@ -130,7 +130,7 @@ p {
     .picture-bloc{
         width:40%;
     }
-    .text-bloc{
+    .ext-bloc{
         width: 100%;
     }
     .intro-bloc{
@@ -150,7 +150,7 @@ p {
     width:13.5%;
 }
 @media screen and (max-width:700px ) {
-    .img-bloc{
+    .screenshot-bloc{
         display: flex;
         flex-direction: column;
     }
@@ -171,8 +171,125 @@ p {
 }
 /*****about page******/
 .icon-bloc{
-    display: flex;
-    justify-content: space-around;
+    padding:10px 5px 10px 5px ;
 }
-/***********/
+.icon-img{
+
+    padding:5px;
+}
+.info{
+    padding:1px;
+    margin-top:10px;
+}
+.link-icon{
+    font-size: 15px;
+    padding-top:7px;
+}
+.chips-link:hover{
+    opacity: 0.8;
+}
+.row-perso{
+    display: flex;
+    flex-wrap: wrap;
+}
+.margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-perso{
+    width: 33.3333%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-perso-training{
+    width: 100%;
+}
+
+.card-content{
+    height:100%;
+    margin:10px;
+}
+.text-bloc {
+    height: 80%;
+    border-radius: 2px 2px 0 0;
+    padding:20px;
+}
+.text-bloc>h3, .trainning-text-bloc>h3{
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+.about-icon{
+    font-size: 28px;
+    margin-right:10px;
+    vertical-align: middle;
+}
+.trainning-text-bloc{
+    height: 100%;
+    padding: 20px;
+    border-radius: 2px;
+}
+.img-bloc {
+    background:white;
+    height:20%;
+    width: 100%;
+    margin:auto;
+    padding: 15px;
+    border-radius: 0 0 2px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link-bloc{
+    display:flex;
+    justify-content: space-around;
+    height: auto;
+    width: 90%;
+
+}
+.link-bloc>img{
+    margin:5px;
+}
+
+@media screen and (max-width:800px ){
+    .card-perso-training,.card-perso{
+        width: 50%;
+    }
+}
+@media screen and (max-width:600px ) {
+
+    .card-perso-training,.card-perso{
+        width: 100%;
+        background-color: #00a65a;
+    }
+    .ard-content{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card-content{
+        margin:0;
+        padding:0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .text-bloc{
+        width: 80%;
+        height:auto;
+    }
+    .img-bloc{
+        width: 20%;
+        height:100%;
+    }
+    .link-bloc{
+        flex-direction: column;
+        height:80%;
+        width: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .link-bloc>img{
+        margin:10px;
+    }
+
+}
 

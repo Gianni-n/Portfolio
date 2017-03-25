@@ -8,7 +8,8 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('PortfolioBundle:Default:index.html.twig');
+        //return $this->render('PortfolioBundle:Default:index.html.twig');
+        return $this->render('portfolio/index.html.twig');
     }
 
     public function projectsAction()
@@ -17,14 +18,14 @@ class DefaultController extends Controller
         $projects = $em->getRepository('PortfolioBundle:Project')->getByDate();
 
 
-        return $this->render('PortfolioBundle:Default:projects.html.twig', array(
+        return $this->render('portfolio/projects.html.twig', array(
             'projects' => $projects,
         ));
     }
 
     public function aboutAction()
     {
-        return $this->render('PortfolioBundle:Default:about.html.twig');
+        return $this->render('portfolio/about.html.twig');
     }
 
     public function contactAction()

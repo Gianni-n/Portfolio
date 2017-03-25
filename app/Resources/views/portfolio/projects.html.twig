@@ -6,7 +6,7 @@
             {% set numb=0 %}
             {% for project in projects %}
 
-            <!---card block vith short description--->
+            <!---card block with short description--->
             <div class="col s12 m6 l4">
                 <p class="brown-text text-lighten-5">{{ project.date.date|date("Y") }}</p>
                 <div class="card brown lighten-5">
@@ -14,7 +14,9 @@
                         <img src="{{ project.img }}">
                         <a title="Description du projet" href="#modal{{ numb }}" class="btn-floating halfway-fab waves-effect waves-light orange"><i class="material-icons">add</i></a>
                         {% if project.code|length > 3 %}
-                            <a href="{{ project.code }}" target="_blank" title="Voir le code source" class="btn-floating halfway-fab waves-effect waves-light left blue-grey darken-3"><i class="material-icons">code</i></a>
+                            <a href="{{ project.code }}" target="_blank" title="Voir le code source" class="btn-floating halfway-fab waves-effect waves-light left blue-grey darken-3">
+                                <img src="{{ asset('pictures/github3.png') }}" alt="">
+                            </a>
                         {% endif %}
                     </div>
                     <div class="card-content">
@@ -27,9 +29,8 @@
                 <div class="modal-content">
                     <h4>{{ project.title }}</h4>
                     <p>{{ project.description }}</p>
-
-                    <div class="row img-bloc">
-
+                    <p>Captures d'écran</p>
+                    <div class="row screenshot-bloc">
                         <img class="materialboxed col  t1" width="100%" src="{{ project.img1 }}">
                         <img class="materialboxed col  t2" width="100%" src="{{ project.img2 }}">
                         <img class="materialboxed col  t3" width="100%" src="{{ project.img3 }}">
