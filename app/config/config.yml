@@ -75,5 +75,7 @@ easy_admin:
     site_name: 'Gianni Napoli Portfolio'
     entities:
         - PortfolioBundle\Entity\Content
+        - PortfolioBundle\Entity\Project
+
 
 
