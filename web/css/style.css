@@ -89,7 +89,7 @@ p {
     font-size:25px;
     text-align: center;
 }
-.tcext-bloc{
+.text-bloc-home{
     margin:15px;
     width: 70%;
 }
@@ -243,11 +243,14 @@ p {
     display:flex;
     justify-content: space-around;
     height: auto;
-    width: 90%;
-
+    width:80%;
 }
 .link-bloc>img{
     margin:5px;
+    min-height: 45px;
+    min-width: 45px;
+    width: 50%;
+    height: 50%;
 }
 
 @media screen and (max-width:800px ){
