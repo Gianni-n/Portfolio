@@ -7,7 +7,7 @@
            </div>
            <div class="text-bloc-home">
                <h2 class="intro-title blue-grey-text text-darken-4">Developpeur web junior PHP/Symfony</h2>
-               <p class="blue-grey-text text-darken-4">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker</p>
+               <p class="blue-grey-text text-darken-4">{{ contents[0].description }}</p>
            </div>
        </div>
 
@@ -17,7 +17,7 @@
                 <div class="card brown lighten-5">
                     <div class="card-content blue-grey-text text-darken-3">
                         <span class="card-title"> <i class="material-icons left blue-grey-text text-darken-3">assignment</i>Projets</span>
-                        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte </p>
+                        <p>{{ contents[4].description }}</p>
                         <a  href="{{ path('portfolio_projects') }}" class="btn-floating btn-large waves-effect waves-light orange lighten-1 right"><i class="material-icons blue-grey-text text-darken-3">keyboard_arrow_right</i></a>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="card brown lighten-5">
                     <div class="card-content blue-grey-text text-darken-3">
                         <span class="card-title test"> <i class="material-icons left  blue-grey-text text-darken-3">person</i>Parcours</span>
-                        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte </p>
+                        <p>{{ contents[5].description }}</p>
                         <a  href="{{ path('portfolio_about') }}" class=" btn-floating btn-large waves-effect waves-light orange lighten-1 right"><i class="material-icons blue-grey-text text-darken-3 ">keyboard_arrow_right</i></a>
                     </div>
 

@@ -9,15 +9,19 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        //return $this->render('PortfolioBundle:Default:index.html.twig');
-        return $this->render('portfolio/index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $contents = $em->getRepository('PortfolioBundle:Content')->findAll();
+        
+        return $this->render('portfolio/index.html.twig', array(
+            'contents' => $contents,
+        ));
     }
 
     public function projectsAction()
     {
         $em = $this->getDoctrine()->getManager();
         $projects = $em->getRepository('PortfolioBundle:Project')->getByDate();
-
+      
 
         return $this->render('portfolio/projects.html.twig', array(
             'projects' => $projects,
@@ -26,7 +30,12 @@ class DefaultController extends Controller
 
     public function aboutAction()
     {
-        return $this->render('portfolio/about.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $contents = $em->getRepository('PortfolioBundle:Content')->findAll();
+
+        return $this->render('portfolio/about.html.twig', array(
+            'contents' => $contents,
+        ));
     }
 
     public function contactAction()

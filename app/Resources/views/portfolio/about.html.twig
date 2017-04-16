@@ -13,7 +13,9 @@
                 <div class="card-content z-depth-2">
                     <div class="trainning-text-bloc orange lighten-2 blue-grey-text text-darken-3">
                         <h3 class="about-titles">Formation</h3>
-                        <p>contenuLorem ipsum dolor sit amipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                        {% if contents[6] is defined %}
+                           <p>{{ contents[6].description }}</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -23,7 +25,9 @@
                 <div class="card-content z-depth-2">
                     <div class="text-bloc cyan lighten-4 blue-grey-text text-darken-3">
                         <h3 class="about-titles"> <i class="material-icons about-icon">settings</i>Back-end</h3>
-                        <p>contenuLorem ipsum dolor sit amipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                        {% if contents[1] is defined %}
+                            <p>{{ contents[1].description }}</p>
+                        {% endif%}
                     </div>
                     <div class="img-bloc">
                         <div class="link-bloc">
@@ -40,7 +44,9 @@
                 <div class="card-content z-depth-2">
                     <div class="text-bloc yellow lighten-4 blue-grey-text text-darken-3">
                         <h3> <i class="material-icons about-icon">color_lens</i>Front-end</h3>
-                        <p>contenuLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                        {% if contents[2] is defined %}
+                            <p>{{ contents[2].description }}</p>
+                        {% endif %}
                     </div>
                     <div class="img-bloc">
                         <div class="link-bloc">
@@ -57,7 +63,9 @@
                 <div class="card-content z-depth-2">
                     <div class="text-bloc green lighten-4 blue-grey-text text-darken-3">
                         <h3 class="about-titles"> <i class="material-icons about-icon">build</i>Outils</h3>
-                        <p>contenuLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+                        {% if contents[3] is defined %}
+                            <p>{{ contents[3].description }}</p>
+                        {% endif %}
                     </div>
                     <div class="img-bloc">
                         <div class="link-bloc">
@@ -122,8 +130,28 @@
                 <li>
                     <div class="collapsible-header"><i class="material-icons">school</i>Diplomes & certifications</div>
                     <div class="collapsible-body blue-grey lighten-4">
-                    <p></p>
-                    <p></p>
+                    <ul>
+                        <li>
+                            {% if contents[7] is defined %}
+                                <p>{{ contents[7].description }}</p>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if contents[8] is defined %}
+                                <p>{{ contents[8].description }}</p>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if contents[9] is defined %}
+                                <p>{{ contents[9].description }}</p>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if contents[10] is defined %}
+                                <p>{{ contents[10].description }}</p>
+                            {% endif %}
+                        </li>
+                    </ul>
                     </div>
                 </li>
             </ul>
