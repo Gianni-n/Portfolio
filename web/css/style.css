@@ -208,6 +208,10 @@ p {
 .card-content{
     height:100%;
     margin:10px;
+
+}
+.card-content .date {
+    text-align: center;
 }
 .text-bloc {
     height: 80%;
@@ -243,7 +247,7 @@ p {
     display:flex;
     justify-content: space-around;
     height: auto;
-    width:80%;
+    width:50%;
 }
 .link-bloc>img{
     margin:5px;
@@ -260,6 +264,12 @@ p {
 }
 @media screen and (max-width:600px ) {
 
+    .text-bloc-home{
+        width:85%;
+    }
+    p{
+        font-size:1.1em;
+    }
     .card-perso-training,.card-perso{
         width: 100%;
         background-color: #00a65a;
