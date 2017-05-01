@@ -1,0 +1,32 @@
+portfolio_homepage:
+    path:     /
+    defaults: { _controller: PortfolioBundle:Default:index }
+
+portfolio_projects:
+    path:     /projets
+    defaults: { _controller: PortfolioBundle:Default:projects}
+
+portfolio_about:
+    path:     /a-propos
+    defaults: { _controller: PortfolioBundle:Default:about}
+
+portfolio_login:
+    path:     /login
+    defaults: { _controller: PortfolioBundle:Default:login}
+
+portfolio_logout:
+    path:     /logout
+
+#portfolio_project:
+#    resource: "@PortfolioBundle/Resources/config/routing/project.yml"
+#    prefix:   /project
+
+#portfolio_contact:
+#    path: /contact
+#    defaults: { _controller: PortfolioBundle:Default:contact}
+
+#portfolio_content:
+#    resource: "@PortfolioBundle/Resources/config/routing/content.yml"
+#    prefix:   /content
+
+

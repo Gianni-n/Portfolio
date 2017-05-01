@@ -2,12 +2,46 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0" />
+        <title>{% block title %}Gianni Napoli | Portfolio{% endblock %}</title>
+        {% block stylesheets %}
+
+
+            <!--Import Google Font-->
+            <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+            <!--Import Google Icon Font-->
+            <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            <!-- Compiled and minified CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+
+
+
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+    <main>
+        {% include 'nav.html.twig' %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% include 'footer.html.twig' %}
+        {% block javascripts %}
+            <!--Import jQuery before materialize.js-->
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    //Activate the navbar menu in responsive
+                    $(".button-collapse").sideNav();
+                    //Activate modal bloc
+                    $(".modal").modal();
+
+                });
+            </script>
+        {% endblock %}
+    </main>
     </body>
 </html>

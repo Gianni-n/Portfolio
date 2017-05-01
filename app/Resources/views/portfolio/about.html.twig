@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+
+    <div class="row">
+          <!----->
+    </div>
+
+        <!----cards bloc--->
+        <div class="row row-perso">
+            <!----training bloc--->
+            <div class="card-perso-training margin">
+                <div class="card-content z-depth-2">
+                    <div class="trainning-text-bloc orange lighten-2 blue-grey-text text-darken-3">
+                        <h3 class="about-titles">Formation</h3>
+                        {% if contents[6] is defined %}
+                           <p>{{ contents[6].description }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        <!----Back-end bloc--->
+            <div class="card-perso margin">
+                <div class="card-content z-depth-2">
+                    <div class="text-bloc cyan lighten-4 blue-grey-text text-darken-3">
+                        <h3 class="about-titles"> <i class="material-icons about-icon">settings</i>Back-end</h3>
+                        {% if contents[1] is defined %}
+                            <p>{{ contents[1].description }}</p>
+                        {% endif%}
+                    </div>
+                    <div class="img-bloc">
+                        <div class="link-bloc">
+                            <img src="{{ asset('pictures/sql.png') }}" alt="">
+                            <img src="{{ asset('pictures/sf.png') }}" alt="">
+                            <img src="{{ asset('pictures/php.png') }}" alt="">
+                            <img src="{{ asset('pictures/html.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!---Front-end bloc---->
+            <div class="card-perso margin">
+                <div class="card-content z-depth-2">
+                    <div class="text-bloc yellow lighten-4 blue-grey-text text-darken-3">
+                        <h3> <i class="material-icons about-icon">color_lens</i>Front-end</h3>
+                        {% if contents[2] is defined %}
+                            <p>{{ contents[2].description }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="img-bloc">
+                        <div class="link-bloc">
+                            <img src="{{ asset('pictures/css.png') }}" alt="">
+                            <img src="{{ asset('pictures/bootstrap.png') }}" alt="">
+                            <img src="{{ asset('pictures/materialize.png') }}" alt="">
+                            <img src="{{ asset('pictures/ps.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---tools bloc---->
+            <div class="card-perso margin">
+                <div class="card-content z-depth-2">
+                    <div class="text-bloc green lighten-4 blue-grey-text text-darken-3">
+                        <h3 class="about-titles"> <i class="material-icons about-icon">build</i>Outils</h3>
+                        {% if contents[3] is defined %}
+                            <p>{{ contents[3].description }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="img-bloc">
+                        <div class="link-bloc">
+                            <img src="{{ asset('pictures/linux.png') }}">
+                            <img src="{{ asset('pictures/github2.png') }}">
+                            <img src="{{ asset('pictures/git.png') }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- collapse bloc -->
+        <ul class="collapsible " data-collapsible="acordion">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">mouse</i>Référence e-learning</div>
+                    <div class="collapsible-body blue-grey lighten-4 link-about">
+                        <p></p>
+                        <a href="https://openclassrooms.com" target="_blank" class="chips-link">
+                            <div class="chip orange darken-3 white-text">
+                                <i class="material-icons right link-icon">send</i>
+                                Open Classrooms
+                            </div>
+                        </a>
+                        <a href="https://www.codecademy.com" target="_blank" class="chips-link">
+                            <div class="chip indigo darken-3 white-text">
+                                <i class="material-icons right link-icon">send</i>
+                                Codecademy
+                            </div>
+                        </a>
+                        <a href="https://www.grafikart.fr" target="_blank" class="chips-link">
+                            <div class="chip green darken-2 grey-text text-darken-4">
+                                <i class="material-icons right link-icon">send</i>
+                                Grafikart
+                            </div>
+                        </a>
+                        <a href="https://www.codewars.com" target="_blank" class="chips-link">
+                            <div class="chip red darken-3 whith-text">
+                                <i class="material-icons right link-icon">send</i>
+                                Code wars
+                            </div>
+                        </a>
+                        <a href="https://www.stackoverflow.com" target="_blank" class="chips-link">
+                            <div class="chip deep-orange white-text">
+                                <i class="material-icons right link-icon">send</i>
+                                Stack Overflow
+                            </div>
+                        </a>
+                        <a href="https://www.alsacreations.com" target="_blank" class="chips-link">
+                            <div class="chip light-green grey-text text-darken-4">
+                                <i class="material-icons right link-icon">send</i>
+                                Alsacréations
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">school</i>Diplomes & certifications</div>
+                    <div class="collapsible-body blue-grey lighten-4">
+                    <ul>
+                        <li>
+                            {% if contents[7] is defined %}
+                                <p>{{ contents[7].description }}</p>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if contents[8] is defined %}
+                                <p>{{ contents[8].description }}</p>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if contents[9] is defined %}
+                                <p>{{ contents[9].description }}</p>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if contents[10] is defined %}
+                                <p>{{ contents[10].description }}</p>
+                            {% endif %}
+                        </li>
+                    </ul>
+                    </div>
+                </li>
+            </ul>
+    </div>
+
+{% endblock %}

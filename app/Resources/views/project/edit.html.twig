@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Project edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_row(edit_form.title) }}
+        {{ form_row(edit_form.date, {'attr': {'class': 'datepicker'}}) }}
+        {{ form_row(edit_form.shortDescription) }}
+        {{ form_row(edit_form.code) }}
+    {{ form_row(edit_form.code, {'attr': {'required': 'd'}}) }}
+        {{ form_row(edit_form.description) }}
+        {{ form_row(edit_form.img) }}
+        {{ form_row(edit_form.img1) }}
+        {{ form_row(edit_form.img2) }}
+        {{ form_row(edit_form.img3) }}
+        <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('project_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+
+{% endblock %}
